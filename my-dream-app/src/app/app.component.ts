@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  users = ['ryan', 'joe', 'cameron', 'john'];
+  activated = false;
   title = 'my-dream-app';
   name : string;
   email : string; 
@@ -29,6 +31,10 @@ export class AppComponent {
     this.hobbies.push(hobby.value);
     hobby.value = "";
     return false;
+  }
+
+  sayHello(){
+    alert("Hola desde app.component");
   }
 }
 

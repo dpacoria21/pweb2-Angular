@@ -20,3 +20,10 @@
   </form>
   <app-hello-world> AQUI </app-hello-world>
 </div>
+<ul>
+  <li *ngFor="let user of users">
+    <app-user [nameUser]="user"></app-user>
+  </li>
+
+  <button (click)="sayHello()">hazme click</button>
+</ul>
