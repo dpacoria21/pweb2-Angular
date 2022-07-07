@@ -10,6 +10,7 @@ export class AppComponent {
   activated = false;
   title = 'my-dream-app';
   name : string;
+  age : number=40;
   email : string; 
   webpage : string;
   hobbies : string[];
