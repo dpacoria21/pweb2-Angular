@@ -4,6 +4,7 @@
 <div class="ash">
   <h2> {{ name }} </h2>
   <h2> {{ email }} </h2>
+
 <button (click)="toggleHobbies()" class="btn">
   Mostrar hobbies
 </button>
@@ -14,4 +15,8 @@
     </ul>
   </div>
   <a href="{{ webpage }}" target="_blank">Visita mi sitio web</a>
+  <form (submit)="newHobby(hobby)">
+    <input #hobby type="text" placeholder="hobby">
+  </form>
+  <app-hello-world> AQUI </app-hello-world>
 </div>

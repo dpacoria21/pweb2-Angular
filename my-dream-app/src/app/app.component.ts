@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-dream-app';
   name : string;
-  email; // :string;
+  email : string; 
   webpage : string;
   hobbies : string[];
   showHobbies : boolean;
@@ -23,6 +23,12 @@ export class AppComponent {
   }
   toggleHobbies(){
     this.showHobbies = !this.showHobbies;
+  }
+
+  newHobby(hobby: { value: string; }) {
+    this.hobbies.push(hobby.value);
+    hobby.value = "";
+    return false;
   }
 }
 
