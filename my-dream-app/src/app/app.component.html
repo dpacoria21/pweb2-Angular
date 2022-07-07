@@ -8,13 +8,18 @@
 <button (click)="toggleHobbies()" class="btn">
   Mostrar hobbies
 </button>
+<!--Cuando usamos un elemento de html para llamar a atributo de angular 
+necesitamos los {{}} para obtenerlo
+pero si usamos (click), *ngIf o *ngFor,  no hay necesidad
+de usar los {{}}-->>
+
   <div *ngIf="showHobbies" class="component2">
     <h3>hobbies:</h3>
     <ul>
       <li *ngFor="let hobby of hobbies">{{ hobby }}</li>
     </ul>
   </div>
-  <a href="{{ webpage }}" target="_blank">Visita mi sitio web</a>
+  <a href="{{webpage}}" target="_blank">Visita mi sitio web</a>
   <form (submit)="newHobby(hobby)">
     <input #hobby type="text" placeholder="hobby">
   </form>
@@ -29,8 +34,15 @@
 </ul>
 
 <h1> Desde app.component </h1>
+
+<form (submit)="addUser(newUser)">
+  <input type="text" #newUser>
+  <button>Agregar Usuario</button>
+</form>
 <ul>
   <li *ngFor="let user of users">
     {{user}} <button (click)="deleteUser(user)">Borrar Usuario</button>
   </li>
 </ul>
+
+

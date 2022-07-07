@@ -44,5 +44,13 @@ export class AppComponent {
       }
     }
   }
+
+  addUser(newUser: { value: string; focus: () => void; }){
+    this.users.push(newUser.value);
+    newUser.value = 'Escribe un usuario';
+    newUser.focus();
+    return false;
+  }
+
 }
 
