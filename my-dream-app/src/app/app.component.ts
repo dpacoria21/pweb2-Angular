@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { DataService } from './data.service';
+import { Post } from './Post';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,14 +18,21 @@ export class AppComponent {
   webpage : string;
   hobbies : string[];
   showHobbies : boolean;
+  posts : Post[];
 
-  constructor(){
+  constructor(private dataService: DataService){
     console.log("Constructor working...");
     this.name = "Diego Ivan Pacori Anccasi";
     this.email = "dpacoria@unsa.edu.pe";
     this.webpage = "http://www.unsa.edu.pe";
     this.hobbies = ["futbol", "Programacion","Counter Strike"];
     this.showHobbies = false;
+
+    this.posts = [];
+    this.dataService.getData().subscribe(data =>{
+      console.log(data);
+      this.posts = data;
+    });
   }
   toggleHobbies(){
     this.showHobbies = !this.showHobbies;
