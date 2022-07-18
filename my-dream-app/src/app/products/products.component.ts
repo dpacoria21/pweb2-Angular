@@ -9,7 +9,7 @@ export class ProductsComponent implements OnInit {
   products : string[];
   
   constructor() { 
-    this.products = ["Gaseosa", "Galleta", "Frutas", "Verduras", "Carnes"];
+    this.products = ["Gaseosa", "Galleta", "Frutas", "Verduras", "Carnes","Cervezas", "Tortas", "Domingueros", "Zapallos"];
   }
 
   ngOnInit(): void {
