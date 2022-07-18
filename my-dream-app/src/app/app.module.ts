@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule, Route } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { HeaderComponent } from './header/header.component';
+import { ProductsComponent } from './products/products.component';
 const routes: Route[] = [
   {path:'', component: AppComponent},
   {path: 'about', component: AboutComponent},
@@ -24,6 +26,8 @@ const routes: Route[] = [
     HelloWorldComponent,
     UserComponent,
     AboutComponent,
+    HeaderComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
