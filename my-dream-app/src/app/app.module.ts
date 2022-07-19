@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Input, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,9 +15,11 @@ import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductsComponent } from './products/products.component';
 const routes: Route[] = [
-  {path:'', component: AppComponent},
+  {path:'', redirectTo: '/hello', pathMatch: 'full'},
   {path: 'about', component: AboutComponent},
   {path: 'hello', component: HelloWorldComponent},
+  {path: 'list', component: ProductsComponent},
+  {path: 'head', component: HeaderComponent}
 ];
 
 @NgModule({
