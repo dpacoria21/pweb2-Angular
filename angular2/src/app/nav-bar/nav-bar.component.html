@@ -1,2 +1,5 @@
 <p>nav-bar works!</p>
 <youtube-player videoId="PRQCAL_RMVo"></youtube-player>
+<div *ngFor="let vid of videos">
+    <youtube-player [videoId]="vid.video"></youtube-player>
+</div>

@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
+  videos = [
+    {
+      video: '4c70QXhhcCQ'
+    },
+    {
+      video: 'SQ0CixO5ZNk'
+    },
+    {
+      video: 'hnq-aecsRIU'
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
