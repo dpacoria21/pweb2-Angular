@@ -16,7 +16,17 @@ export class NavBarComponent implements OnInit {
     },
     {
       video: 'hnq-aecsRIU'
+    },
+    {
+      video: '4c70QXhhcCQ'
+    },
+    {
+      video: 'SQ0CixO5ZNk'
+    },
+    {
+      video: 'hnq-aecsRIU'
     }
+    
   ]
 
   constructor() { }
